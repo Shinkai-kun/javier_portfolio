@@ -312,34 +312,27 @@ body.dark .projs:hover {
 }
 @media screen and (max-width: 768px){
     body.dark .section2 {
-            height: 100vh;
+            flex-direction: column;
+            height: 100%;
+        }
+    
+       body.dark .section2 .sec2-cont1 {
+            border: none;
+            padding: 10px;
             width: 100%;
             display: block;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        body.dark .section2 .sec2-cont1 {
-            border: 1px solid black;
-            border-radius: 5px;
-            padding: 10px;
-            width: 90%;
-            display: block;
-            margin-left: 25px;
+            margin: 0;
             text-align: justify;
+            line-height: 30px;
+            border:none;
+                border-radius: 0;
+                padding: 20px;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                color: #fff;
         }
     
-        body.dark .section2 .sec2-cont1 h1 {
-            text-align: center;
-        }
-    
-        body.dark .section2 .sec2-cont2 {
-            width: 90%;
-            margin-left: 20px;
-        }
-    
-        body.dark .container2 {
-            display: block;
-            margin-top: 20px;
-            margin-left: 70px;
+       body.dark .section2 .sec2-cont2 {
+            width: 100%;
         }
 }
