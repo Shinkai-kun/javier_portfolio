@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+}
+
+body.dark {
+    background-color: #292c35;
+    background-image: url('img/fortrial2.jpg');
+}
+
+/* #9b59b6 */
+
+body.dark h1,
+body.dark .support a {
+    color: #fff;
+}.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #fff;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #000;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+nav ul li .tog {
+    padding-top: 0;
+    padding-left: 20px;
+}
+
+
+body.dark .logo p a {
+    color: #fff;
+}
+
+body.dark header nav ul li a {
+    color: #fff;
+}
+body.dark .section1 button {
+
+    background-color: #fff;
+
+}
+
+body.dark .section1 button a {
+
+    color: #000;
+
+
+}
+
+body.dark .section1 button:hover {
+    color: #000000;
+    background-color: #818589;
+    cursor: url('img/robot.png'), auto;
+    transition: ease-in-out .3s;
+    z-index: 1;
+    text-decoration: none;
+}
+body.dark .section1 h2 {
+    color: #fff;
+}
+body.dark .section1 p {
+    color: #D3D3D3;
+}
+/* section two dark mode */
+body.dark .section2 .sec2-cont1 {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 55%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+body.dark .profile-container {
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0);
+    border-radius: 5px;
+    transition: 1s all ease;
+}
+
+body.dark .profile-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/edmar3.JPG') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 1;
+    transition: all .5s ease-in;
+}
+
+body.dark .profile-container:hover:before {
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+
+/* Profile Card Wrapper */
+body.dark .profile-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+body.dark .profile-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #000000 0%, #fff 100%);
+    transform: skew(30deg) translateX(125%);
+    opacity: 0.9;
+    transition: all 0.6s ease;
+}
+
+body.dark .profile-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #d3d3d3 0%, #000000 100%);
+    transform: skew(30deg) translateX(-125%);
+    opacity: 0.9;
+    transition: all 0.6s ease;
+}
+
+body.dark .profile-container:hover .profile-wrapper::after {
+    transform: skew(30deg) translateX(125%);
+    background: linear-gradient(to right, #ffff 0%, #d3d3d3 100%);
+
+}
+
+body.dark .profile-container:hover .profile-wrapper::before {
+    transform: skew(30deg) translateX(-125%);
+    background: linear-gradient(to right, #ffff 0%, #d3d3d3 100%);
+    z-index: 100;
+}
+
+/* Profile Card */
+body.dark .profile-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 10px;
+    position: relative;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+body.dark .profile-container:hover .profile-card {
+    opacity: 1;
+    transition: all 0.6s ease;
+    transition-delay: 0.2s;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+/* Profile Picture */
+body.dark .profile-card img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 1rem 0;
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white),
+        linear-gradient(to right, #000000, #d3d3d3);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    /* border: 2px solid #1999; */
+    position: relative;
+}
+
+body.dark .profile-card h2 {
+    line-height: 1.2;
+    color: #fff;
+}
+
+body.dark .profile-card h4 {
+    line-height: 1.5;
+    color: #fff;
+}
+
+body.dark .profile-card p {
+    line-height: 1.2;
+    color: #fff;
+    margin: 10px 0;
+}
+
+/* Profile Icons */
+body.dark .profile-card .icons {
+    display: flex;
+    color: #fff;
+    width: 90%;
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+    margin: 5px 0;
+}
+
+body.dark .profile-card .icons i:hover {
+    background-image: linear-gradient(to right, grey 0%, grey 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+
+body.dark .profile-card .socmed {
+    font-weight: 500;
+    color: #fff;
+    padding: 8px 20px;
+    margin-top: 1rem;
+    border-radius: 50px;
+}
+/* Profile Button */
+body.dark .viewProfBtn{
+    background: linear-gradient(to right, #000 0%, #000 100%);
+    color: #fff;
+    border: 1px solid #fff;
+}
+body.dark .viewProfBtn:hover {
+    color: #000;
+    background-color: #fff;
+    background: linear-gradient(to right, #A9A9A9 0%, #A9A9A9 100%);
+    border: 1px solid black;
+    padding: 8px 20px;
+
+}
+body.dark .los {
+    color: #fff;
+}
+body.dark .html{
+    content: url("img/html-white.png");
+}
+body.dark .css {
+    content: url("img/css-white.png");
+}
+body.dark .js {
+    content: url("img/js-white.png");
+} 
+/* section 3 */
+body.dark .my {
+    color: #fff;
+
+}
+
+body.dark .portfolio {
+
+    color: #fff;
+}
+body.dark .projs {
+    background-color: #848884;
+}
+body.dark .projs:hover {
+    background-color: #d3d3d3;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(24px);
+}
+@media screen and (max-width: 768px){
+    body.dark .section2 {
+            height: 100vh;
+            width: 100%;
+            display: block;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        body.dark .section2 .sec2-cont1 {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 90%;
+            display: block;
+            margin-left: 25px;
+            text-align: justify;
+        }
+    
+        body.dark .section2 .sec2-cont1 h1 {
+            text-align: center;
+        }
+    
+        body.dark .section2 .sec2-cont2 {
+            width: 90%;
+            margin-left: 20px;
+        }
+    
+        body.dark .container2 {
+            display: block;
+            margin-top: 20px;
+            margin-left: 70px;
+        }
+}
