@@ -202,6 +202,7 @@
 body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden !important;
 }
 /* nav bar */
 nav .logo {
@@ -966,7 +967,6 @@ fieldset {
     display: flex;
     width: 30%;
     line-height: 10px;
-    
 }
 .details p{
     font-size: 12px;
@@ -1033,7 +1033,9 @@ fieldset {
 button:hover svg {
     animation: bounce 2s infinite linear;
 }
-
+.footerMobile {
+    display: none;
+}
 @keyframes bounce {
     0% {
         transform: translateX(-50%) translateY(-50%)
@@ -1060,17 +1062,13 @@ button:hover svg {
     outline: none;
 }
 @media screen and (max-width: 768px) {
-    nav .logo {
-            margin: 4% 0;
-        }
     .logo p a {
-            text-decoration: none;
-            font-family: "Orbitron", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 700;
-            font-style: normal;
-            color: #fff;
-            font-size: 20px;
+        display: none;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     nav .links {
         float: none;
@@ -1088,6 +1086,7 @@ button:hover svg {
         overflow: hidden;
         box-sizing: border-box;
         transition: all .5s ease-in-out;
+        padding: 0;
     }
 
     nav .links a {
@@ -1117,149 +1116,209 @@ button:hover svg {
     nav :checked~.icon-burger .line:nth-child(2) {
         opacity: 0;
     }
-        .section1 {
-            height: 100vh;
-            width: 100%;
-        }
-    
-        .container {
-            max-width: 1200px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-    
-        .container h1 {
+    .section1 {
+        height: 100vh;
+        width: 100%;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container h1 {
+              font-family: "Orbitron", sans-serif;
+              font-optical-sizing: auto;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 22px;
+              color: #000;
+              padding: 0%;
+              margin: 0%;
+    }
+    .container h2{
+        padding: 0;
+        margin: 0;
+    }
+        .typewriter h1 {
+            line-height: 40px;
+            color: #000;
             font-family: "Orbitron", sans-serif;
             font-optical-sizing: auto;
             font-style: normal;
             font-weight: 700;
-            font-size: 30px;
-            color: #000;
-            padding: 0%;
-            margin: 0%;
+            overflow: hidden;
+            /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange;
+            /* The typwriter cursor */
+            white-space: nowrap;
+            /* Keeps the content on a single line */
+            margin: 0 auto;
+            /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em;
+            /* Adjust as needed */
+            animation:
+                typing 5.5s steps(30, end),
+                blink-caret .5s step-end infinite;
         }
+    .section2{
+        flex-direction: column;
+        height: 100%;
+    }
+    .section2 .sec2-cont1 {
+        border: none;
+        padding: 10px;
+        width: 100%;
+        display: block;
+        margin: 0;
+        text-align: justify;
+        line-height: 30px;
+    }
+    .section2 .sec2-cont2 {
+        width: 100%;
+    }
+    .container2 {
+        margin-top: 20px;
+    }
+    .section3 {
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section3 .sec3-cont1 {
+        width: 100%;
+    }
+    
+    .sec3-cont1 h1 {
+        text-align: center;
+        font-family: "Orbitron", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 36px;
+    }
+    
+    .projCont {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    
+    .los {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    
+    .skill {
+        padding-top: 20px;
+    }
+    
+    .skill img {
+        width: 100px;
+        padding-bottom: 10px;
+    }
+    
+    .progress1 {
+        height: 30px;
+        width: 150px;
+        background-color: lightgray;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+    .progress-done1 {
+        border-radius: 2.5px;
+        font-size: 12px;
+    }
+    
+    .progress2 {
+        height: 30px;
+        width: 150px;
+        background-color: lightgray;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+    
+    .progress-done2 {
+        border-radius: 5px;
+        font-size: 12px;
+    
+    }
+    
+    .progress3 {
+        height: 30px;
+        width: 150px;
+        background-color: lightgray;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+    
+    .progress-done3 {
+        border-radius: 5px;
+        font-size: 12px;
+    
+    }
     
     
-        .container h2 {
-            color: #36454F;
-            font-family: "Orbitron", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-            font-size: 16px;
-            padding: 0;
-            margin: 0;
-        }
+    .progress4 {
+        height: 30px;
+        width: 150px;
+        background-color: lightgray;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
     
-        .btn {
-            margin-top: 20px;
-        }
+    .progress-done4 {
+        border-radius: 5px;
+        font-size: 12px;
     
-        .btn #aboutMe {
-            font-family: "Orbitron", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-            background-color: #000000;
-            color: #fff;
-            font-size: 20px;
-            width: 150px;
-            height: 40px;
-            border: none;
-            border-radius: 5px;
-            transition: ease-in-out .3s;
-        }
-    
-        .btn #aboutMe:hover {
-            color: #000000;
-            background-color: #818589;
-            cursor: url('img/robot.png'), auto;
-            transition: ease-in-out .3s;
-            z-index: 1;
-            text-decoration: none;
-        }
-    
-        .btn #projects {
-            background-color: #ffffff;
-            font-size: 20px;
-            width: 150px;
-            height: 40px;
-            border: 1px solid black;
-            border-radius: 5px;
-            transition: ease-in-out .3s;
-        }
-    
-        .btn #projects {
-            text-decoration: none;
-            color: #000;
-            font-family: "Orbitron", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-        }
-    
-        .btn #projects:hover {
-            background-color: #818589;
-            color: #fff;
-            cursor: url('img/robot.png'), auto;
-        }
-    
-        .frontEnd {
-            margin-top: 30px;
-        }
-        .section2 {
-            height: 100vh;
+    }
+        .section4 {
+            height: 60vh;
             width: 100%;
             display: block;
             align-items: center;
+    
+        }
+    
+        .container3 {
+            width: 80%;
+            margin-top: 10%;
+            display: flex;
             justify-content: space-evenly;
-        }
-        .section2 .sec2-cont1 {
-            border: 1px solid black;
-            border-radius: 5px;
-            padding: 10px;
-            width: 90%;
-            display: block;
-            margin-left: 25px;
-            text-align: justify;
-        }
-        .section2 .sec2-cont1 h1{
-            text-align: center;
-        }
-        .section2 .sec2-cont2 {
-        width: 90%;
-        margin-left: 20px;
-        }
-        .container2 {
-            display: block;
-            margin-top: 20px;
-            margin-left: 70px;
-        }
-        .section3 {
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
             align-items: center;
-            margin-top: 30%;
-        }
-
-        .section3 .sec3-cont1 {
-            width: 50%;
-        }
-
-        .sec3-cont1 h1 {
             text-align: center;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+    
+        .my {
             font-family: "Orbitron", sans-serif;
             font-optical-sizing: auto;
             font-weight: 700;
             font-style: normal;
-            font-size: 36px;
+            font-size: 48px;
+            color: #000000;
+            margin: 0;
+            padding: 0;
         }
+    
+        .portfolio {
+            font-family: "Orbitron", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 48px;
+            color: #000000;
+        }
+    
         .projCont {
             display: flex;
             flex-wrap: wrap;
@@ -1267,129 +1326,108 @@ button:hover svg {
             justify-content: space-evenly;
             width: 100%;
         }
-        .los {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 100%;
+    
+        .projs {
+            background-color: #000000;
+            width: 165px;
+            height: 90px;
+            border-radius: 10px;
+            margin-top: 3%;
         }
-        .skill{
-            padding-top: 20px;
+        .footer{
+            display: none;
+            
         }
-        .skill img {
-            width: 150px;
-            padding-bottom: 10px;
+        footer .footerContainer{
+            display: block;
+        }
+        footer .footerMobile{
+            background-color: black;
+            height: 40vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+        .footerMobile .footerIcons {
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .footerMobile .sec-foot-container {
+            width: 100%;
+            line-height: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .footerMobile .details p {
+             font-size: 12px;
+             color: #ffff;
+             
+        }
+        .footerMobile .details p i {
+                    margin-right: 10px;
         }
         
-        .progress1 {
-            height: 30px;
-            width: 200px;
-            background-color: lightgray;
-            border-radius: 5px;
-            margin:0 auto;
-        }
-        .progress-done1 {
-            border-radius: 2.5px;
-            font-size: 16px;
-          
-        }
-        .progress2 {
-            height: 30px;
-                width: 200px;
-                background-color: lightgray;
-                border-radius: 5px;
-                margin: 0 auto;
-        }
-                                .progress-done2{
-                                    border-radius: 5px;
-                                    font-size: 16px;
-                
-                                }
-                .progress3 {
+            .footerMobile .backToTop {
+                    width: 100%;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                }
+        
+                .noselect {
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                }
+        
+             .footerMobile #footerBtn {
+                    width: 30px;
                     height: 30px;
-                        width: 200px;
-                        background-color: lightgray;
-                        border-radius: 5px;
-                        margin: 0 auto;
-                }
-                                .progress-done3 {
-                                    border-radius: 5px;
-                                    font-size: 16px;
-                
-                                }
-               
-        
-                .progress4 {
-                height: 30px;
-                    width: 200px;
-                    background-color: lightgray;
-                    border-radius: 5px;
-                    margin: 0 auto;
-                }
-                                .progress-done4 {
-                                    border-radius: 5px;
-                                    font-size: 16px;
-                
-                                }
-
-                .section4 {
-                    height: 40vh;
-                    width: 100%;
-                    display: block;
-                    align-items: center;
-                    
+                    cursor: pointer;
+                    background-color: #fff;
+                    border: none;
+                    border-radius: 50%;
+                    transition: 200ms;
                 }
         
-                .container3 {
-                    width: 80%;
-                    margin-top: 10%;
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    text-align: center;
-                    margin: 0 auto;
-                    font-size: 16px;
+                        .footerMobile #footerBtn svg {
+                    fill: #000;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    transform: translateX(-50%) translateY(-50%);
                 }
         
-                .my {
-                    font-family: "Orbitron", sans-serif;
-                    font-optical-sizing: auto;
-                    font-weight: 700;
-                    font-style: normal;
-                    font-size: 48px;
-                    color: #000000;
-                    margin: 0;
-                    padding: 0;
+                    .footerMobile #footerBtn:before {
+                    content: 'Back to Top';
+                    position: absolute;
+                    transform: translateX(-50%) translateY(30px);
+                    font-size: 15px;
+                    transition: 200ms;
+                    color: transparent;
+                    font-weight: bold;
                 }
         
-                .portfolio {
-                    font-family: "Orbitron", sans-serif;
-                    font-optical-sizing: auto;
-                    font-weight: 700;
-                    font-style: normal;
-                    font-size: 48px;
-                    color: #000000;
+                        .footerMobile #footerBtn:hover {
+                    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+                    width: 40px;
+                    height: 40px;
                 }
         
-                .projCont {
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    justify-content: space-evenly;
-                    width: 100%;
+                                .footerMobile #footerBtn:hover::before {
+                    color: #fff;
                 }
         
-                .projs {
-                    background-color: #000000;
-                    width: 165px;
-                    height: 90px;
-                    border-radius: 10px;
-                    margin-top: 3%;
+                button:hover svg {
+                    animation: bounce 2s infinite linear;
                 }
-.details p {
-    font-size: 8px;
-    color: #ffff;
-}
         
 }
