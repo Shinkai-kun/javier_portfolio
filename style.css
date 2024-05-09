@@ -1033,7 +1033,7 @@ fieldset {
 button:hover svg {
     animation: bounce 2s infinite linear;
 }
-.footerCont {
+.footerMobile {
     display: none;
 }
 @keyframes bounce {
