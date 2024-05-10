@@ -1076,7 +1076,7 @@ button:hover svg {
         z-index: 9;
         left: 0;
         right: 0;
-        top: 90px !important;
+        top: 90px;
         bottom: 100%;
         width: auto;
         height: auto;
