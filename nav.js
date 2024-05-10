@@ -3,7 +3,7 @@ window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.querySelector("nav").style.height = "75px";
+        document.querySelector("nav").style.height = "90px";
         document.querySelector("#logoimg").style.width = "80px";
     } else {
         document.querySelector("nav").style.height = "100px";
